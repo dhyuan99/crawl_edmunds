@@ -84,6 +84,8 @@ if __name__ == '__main__':
 	today = date.today()
 	today = today.strftime("%Y-%m-%d")
 	for model, url in url_dict.items():
+		if not os.path.exists(f'{save_folder}/{model}'):
+			os.mkdir(f'{save_folder}/{model}')
 		df = collect_data(url)
 		df.set_index('vin', inplace=True)
 		df.to_csv(f'{save_folder}/{model}/{today}.csv')
