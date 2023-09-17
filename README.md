@@ -16,3 +16,5 @@ After that, simply run
 python main.py
 ```
 and you will get the car info saved in your folder.
+
+I upload some examples in the `./data` folder.
