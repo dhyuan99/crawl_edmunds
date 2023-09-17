@@ -1,4 +1,4 @@
-# crawl_edmunds
+# Crawl Car Info from Edmunds.
 This repo crawls the car info listed on Edmunds automatically.
 
 To start with, install required packages by running:
