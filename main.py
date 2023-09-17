@@ -79,11 +79,12 @@ if __name__ == '__main__':
 		'GTI': 'https://www.edmunds.com/inventory/srp.html?deliverytype=local&inventorytype=used&make=volkswagen&model=golf-gti&historyinfo=noAccidents',
 		'all': 'https://www.edmunds.com/inventory/srp.html?deliverytype=local&inventorytype=used%2Ccpo&historyinfo=noAccidents'
 	}
+	save_folder = './data'
 
 	today = date.today()
 	today = today.strftime("%Y-%m-%d")
 	for model, url in url_dict.items():
 		df = collect_data(url)
 		df.set_index('vin', inplace=True)
-		df.to_csv(f'/Users/kycipapydonahue/Documents/github/car_price/data/{model}/{today}.csv')
+		df.to_csv(f'{save_folder}/{model}/{today}.csv')
 		print(df)
